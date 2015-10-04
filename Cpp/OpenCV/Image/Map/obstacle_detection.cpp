@@ -24,5 +24,6 @@ void obstDetection(Mat im){
 int main(int argc, char *argv[])
 {
 	Mat im = imread("map.jpg");
-    obstDetection(im);
+	obstDetection(im);
+	return(0);
 }
