@@ -88,7 +88,7 @@ namespace ChangeBrightness
             }
 
             // 画像の保存
-            bitmap.Save(filename, ImageFormat.Bmp);
+            bitmap.Save(filename, ImageFormat.Jpeg);
         }
     }
 }
