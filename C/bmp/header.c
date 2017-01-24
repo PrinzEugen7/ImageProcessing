@@ -40,10 +40,10 @@ int main(void){
     loadBmp("test.bmp", &w, &h, &bit);	
   
     // 読み取り結果表示
-    printf("画像の幅[px]：%d\n", w);
-    printf("画像の高さ[px]：%d\n", h);
-    printf("ビット数：%d\n", bit);
-    printf("チャンネル数:%d", bit/8);
+    printf("画像の幅=%d[px]：\n", w);
+    printf("画像の高さ=%d[px]\n", h);
+    printf("ビット数=%d[bit]\n", bit);
+    printf("チャンネル数=%d[ch]", bit/8);
     
     return 0;
 }
