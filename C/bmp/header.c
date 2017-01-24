@@ -4,10 +4,10 @@
 // ビットマップ画像の読み取り
 int loadBmp(char fn[], int *w, int *h, int *bit){
     FILE *fp;               // ファイルポインタの宣言
-    unsigned char	hdr[54];	// ヘッダ格納用の配列
+    unsigned char hdr[54];  // ヘッダ格納用の配列
     int i;                  // ループ用変数
     
-	  // bmpファイルをバイナリモードで読み取り
+    // bmpファイルをバイナリモードで読み取り
     fp=fopen(fn,"rb");		
 	
     // 画像ファイルが見つからない場合のエラー処理
@@ -28,14 +28,14 @@ int loadBmp(char fn[], int *w, int *h, int *bit){
     *h = hdr[22] + hdr[23]*256;
     *bit = hdr[28];
     
-    fclose(fp);					// ファイルを閉じる
+    fclose(fp);  // ファイルを閉じる
     
     return 0;
 }
 
 
 int main(void){
-    int	w, h, bit;			// 変数の宣言
+    int w, h, bit;    // 変数の宣言
     // bmp画像の読み込み
     loadBmp("test.bmp", &w, &h, &bit);	
   
@@ -45,5 +45,5 @@ int main(void){
     printf("ビット数：%d\n", bit);
     printf("チャンネル数:%d", bit/8);
     
-  	return 0;
+    return 0;
 }
